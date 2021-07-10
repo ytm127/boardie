@@ -18,6 +18,17 @@ generator client {
 // }
 
 model BoardGame {
+  id          Int     @id @default(autoincrement())
+  name        String?
+  description String?
+}
+
+model User {
+  id   Int     @id @default(autoincrement())
+  name String?
+}
+
+model Holder {
   id   Int     @id @default(autoincrement())
   name String?
 }

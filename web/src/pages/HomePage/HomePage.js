@@ -1,5 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 
+
+
 const HomePage = () => {
   return (
     <div class=" mx-auto">
@@ -37,21 +39,21 @@ const HomePage = () => {
         </div>
       </nav>
       {/* ========================================================================== */}
-      <div className="bg-gray-200">
-        <div className="grid grid-cols-3 gap-4 p-4 px-16">
-          <div className="col-span-1"></div>
-          <form class="w-full max-w-sm col-span-1">
-            <div class="flex items-center border-b border-teal-500 py-2">
-              <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none border-4 bg-white rounded-xl" type="text" placeholder="Settlers of catan..." aria-label="Full name" />
-              <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
-                Find the game
+      {/* <div className="bg-gradient-to-r from-boardgame-400 via-boardgame-200 to-boardgame-300"> */}
+      <div className="bg-boardgame bg-cover">
+        <div className="grid grid-cols-5 gap-1 py-4 px-1">
+          <form class="w-full max-w-md col-span-5 mx-auto bg-white rounded-3xl">
+            <div class="flex items-center border-teal-500">
+              <input class="appearance-none bg-white hover:bg-gray-100 border-none w-full text-gray-700 py-1 px-2 leading-tight focus:outline-none border-4 rounded-3xl m-2 text-lg" type="text" placeholder="Settlers of catan..." aria-label="Full name" />
+              <button class="flex-shrink-0 bg-teal-500 hover:bg-red-400 border-red-500 hover:border-red-400 text-lg text-white p-1 rounded-3xl bg-red-300 m-2" type="button">
+                🚀 go! 🚀
               </button>
             </div>
           </form>
         </div>
-        <div className="grid grid-cols-3 gap-4 p-4 px-16">
+        <div className="grid grid-cols-3 gap-4 p-4 px-20">
           <div className="col-span-1">
-            <div className="text-6xl text-white font-bold">Have An. Epic. Game. Night.</div>
+            <div className="text-6xl text-white font-bold">Have. An. Epic. Game. Night.</div>
             <div className="mt-8 mb-8">
               <button className="bg-white p-4 rounded-xl">explore now</button>
             </div>

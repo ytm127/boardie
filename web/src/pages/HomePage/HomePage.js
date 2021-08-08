@@ -1,8 +1,16 @@
-import { Link, routes } from '@redwoodjs/router'
-
+import { Link, navigate, routes } from '@redwoodjs/router'
+import { useAuth } from '@redwoodjs/auth'
+import { useEffect } from 'react'
 
 
 const HomePage = () => {
+  const { logIn, logOut, isAuthenticated } = useAuth()
+
+  // when you logout, nav to login page
+  useEffect(()=> {
+    !isAuthenticated && navigate(routes.login())
+  }, [isAuthenticated])
+
   return (
     <div class=" mx-auto">
       <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-red-500">
@@ -56,6 +64,12 @@ const HomePage = () => {
             <div className="text-6xl text-white font-bold">Have. An. Epic. Game. Night.</div>
             <div className="mt-8 mb-8">
               <button className="bg-white p-4 rounded-xl">explore now</button>
+              {
+
+              }
+              {
+                isAuthenticated && <button className="bg-white p-4 rounded-xl" onClick={logOut}>logout</button>
+              }
             </div>
           </div>
           {/* <div class="col-span-2">

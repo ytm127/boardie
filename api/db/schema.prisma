@@ -24,8 +24,10 @@ model BoardGame {
 }
 
 model User {
-  id   Int     @id @default(autoincrement())
-  name String?
+  id             Int     @id @default(autoincrement())
+  username       String? @unique
+  hashedPassword String  @unique
+  salt           String  @unique
 }
 
 model Holder {
